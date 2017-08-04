@@ -54,3 +54,35 @@ is_sunny = False
 if is_raining and is_sunny:
     print("Is there a rainbow?")
 
+
+def cylinder_surface_area(radius, height, has_top_and_bottom):
+    side_area = height * 6.28 * radius
+    if has_top_and_bottom:
+        top_area = 3.14 * radius ** 2
+        return top_area + side_area
+    else:
+        return side_area
+
+print(cylinder_surface_area(10, 20, True))
+
+
+errors = 3
+if errors:
+    print("There are " + str(errors) + " mistakes. Please correct.")
+else:
+    print("No mistakes here!")
+
+
+def which_prize2(points):
+    
+    prize = None
+    if points <= 50:
+        prize = "a wooden rabbit"
+    elif 150 <= points <= 180:
+        prize = "a wafer-thin mint"
+    elif points >= 181:
+        prize = "a penguin"
+    if prize:
+        return "Congratulations! You have won " + prize + "!"
+    else:
+        return "Oh dear, no prize this time."
